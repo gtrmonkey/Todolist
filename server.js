@@ -17,9 +17,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Routes
 // -----------------
 
-require('../06-unit/public/routes/api-routes')(app);
-require('../06-unit/public/routes/html-routes')(app);
-
+require('./public/routes/api-routes')(app);
+require('./public/routes/html-routes')(app);
 // Starts our server on the predefined PORT
 app.listen(PORT, function(){
   console.log(`App is now listening on PORT ${PORT}`)
